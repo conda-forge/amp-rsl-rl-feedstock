@@ -1,5 +1,5 @@
 {% set name = "amp-rsl-rl" %}
-{% set version = "0.2.8" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/amp_rsl_rl-{{ version }}.tar.gz
-  sha256: 519bca839bba6428750409eb82bf7fc15631a5a8c30a8efe98fe377f0bdd54ec
+  sha256: 350eaf8c10c698f012c7c0f293d5b8715f9bc7ea67551e1fcd6647bba954f8ce
 
 build:
   noarch: python
@@ -22,11 +22,13 @@ requirements:
     - wheel
     - pip
   run:
+    - tensordict >=0.7.0
+    - torchvision >=0.5.0
     - python >={{ python_min }}
     - numpy >=1.21.0
     - scipy >=1.7.0
-    - pytorch >=1.10.0
-    - rsl-rl-lib >=2.3.0
+    - pytorch >=2.6.0
+    - rsl-rl-lib >=3.0.0
 
 test:
   imports:
