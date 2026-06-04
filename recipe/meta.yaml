@@ -1,5 +1,5 @@
 {% set name = "amp-rsl-rl" %}
-{% set version = "2.2.0" %}
+{% set version = "2.2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/amp_rsl_rl-{{ version }}.tar.gz
-  sha256: d8aca72c9bf1d986b3b71f1fa7e5fc7d75f43c4f944d8202eed1fdf11d767aac
+  sha256: 1906cd0a85337960198ac3b542e15d8a6f44a2274769b51f447f45a1b34f2b01
 
 build:
   noarch: python
